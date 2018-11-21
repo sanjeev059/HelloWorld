@@ -17,8 +17,17 @@ pipeline {
       }
     }
     stage('Test') {
-      steps {
-        echo 'tested'
+      parallel {
+        stage('Test') {
+          steps {
+            echo 'tested'
+          }
+        }
+        stage('Run test Parellel') {
+          steps {
+            echo 'hello'
+          }
+        }
       }
     }
     stage('Artifacts') {
