@@ -26,6 +26,7 @@ pipeline {
         stage('Run test Parellel') {
           steps {
             echo 'hello'
+            junit(allowEmptyResults: true, testResults: 'done')
           }
         }
       }
