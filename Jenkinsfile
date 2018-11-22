@@ -2,59 +2,23 @@ pipeline {
   agent any
   stages {
     stage('Build Prod') {
-      parallel {
-        stage('Build Prod') {
-          steps {
-            echo 'In Production'
-          }
-        }
-        stage('Build Learn') {
-          steps {
-            echo 'In Learn'
-          }
-        }
+      steps {
+        echo 'In Production'
       }
     }
     stage('Promote Prod') {
-      parallel {
-        stage('Promote Prod') {
-          steps {
-            echo 'Build Prod'
-          }
-        }
-        stage('Promote Learn') {
-          steps {
-            echo 'In Learn Promote'
-          }
-        }
+      steps {
+        echo 'Build Prod'
       }
     }
     stage('Deploy Prod') {
-      parallel {
-        stage('Deploy Prod') {
-          steps {
-            echo 'Deployed'
-          }
-        }
-        stage('Deploy Learn') {
-          steps {
-            echo 'In Learn Deploy'
-          }
-        }
+      steps {
+        echo 'Deployed'
       }
     }
     stage('Test Prod') {
-      parallel {
-        stage('Test Prod') {
-          steps {
-            echo 'tested'
-          }
-        }
-        stage('Test Learn') {
-          steps {
-            echo 'In Learn testing'
-          }
-        }
+      steps {
+        echo 'tested'
       }
     }
     stage('Artifacts') {
