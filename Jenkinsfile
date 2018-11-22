@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Production') {
       parallel {
-        stage('Production') {
+        stage('') {
           steps {
             echo 'In Production'
           }
@@ -32,7 +32,7 @@ pipeline {
             echo 'Demo Build '
           }
         }
-        stage('DEPLOY') {
+        stage('BUILD') {
           steps {
             echo 'Learn Building '
           }
@@ -46,7 +46,7 @@ pipeline {
             echo 'Deployed'
           }
         }
-        stage('BUILD') {
+        stage('DEPLOY') {
           steps {
             echo 'Deploy'
           }
