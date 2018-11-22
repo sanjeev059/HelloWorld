@@ -3,12 +3,12 @@ pipeline {
   stages {
     stage('Prod') {
       parallel {
-        stage('') {
+        stage('error') {
           steps {
             echo 'In Production'
           }
         }
-        stage('Demo') {
+        stage('') {
           steps {
             echo 'Am Demo'
           }
@@ -22,12 +22,12 @@ pipeline {
     }
     stage('build prod') {
       parallel {
-        stage('') {
+        stage('error') {
           steps {
             echo 'Build Prod'
           }
         }
-        stage('Build Demo') {
+        stage('') {
           steps {
             echo 'Demo Build '
           }
@@ -41,12 +41,12 @@ pipeline {
     }
     stage('deploy prod') {
       parallel {
-        stage('') {
+        stage('error') {
           steps {
             echo 'Deployed'
           }
         }
-        stage('Deploy demo') {
+        stage('') {
           steps {
             echo 'Deploy'
           }
@@ -60,12 +60,12 @@ pipeline {
     }
     stage('test prod') {
       parallel {
-        stage('') {
+        stage('error') {
           steps {
             echo 'tested'
           }
         }
-        stage('Run test Parellel') {
+        stage('') {
           steps {
             echo 'hello'
             junit(allowEmptyResults: true, testResults: 'done')
