@@ -22,7 +22,7 @@ pipeline {
     }
     stage('Build') {
       parallel {
-        stage('Build') {
+        stage('') {
           steps {
             echo 'Building'
           }
