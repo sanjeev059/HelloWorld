@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('Production') {
+    stage('Prod') {
       parallel {
         stage('') {
           steps {
@@ -20,9 +20,9 @@ pipeline {
         }
       }
     }
-    stage('error') {
+    stage('build prod') {
       parallel {
-        stage('Build') {
+        stage('') {
           steps {
             echo 'Build Prod'
           }
@@ -39,9 +39,9 @@ pipeline {
         }
       }
     }
-    stage('Deploy ') {
+    stage('deploy prod') {
       parallel {
-        stage('Deploy Prod') {
+        stage('') {
           steps {
             echo 'Deployed'
           }
@@ -58,9 +58,9 @@ pipeline {
         }
       }
     }
-    stage('Test') {
+    stage('test prod') {
       parallel {
-        stage('Test') {
+        stage('') {
           steps {
             echo 'tested'
           }
