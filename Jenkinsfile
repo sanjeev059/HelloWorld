@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Production') {
       parallel {
-        stage('Production') {
+        stage('') {
           steps {
             echo 'In Production'
           }
