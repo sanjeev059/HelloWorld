@@ -27,12 +27,12 @@ pipeline {
             echo 'Building'
           }
         }
-        stage('') {
+        stage('Build') {
           steps {
             echo 'Demo Build '
           }
         }
-        stage('') {
+        stage('build') {
           steps {
             echo 'Learn Building '
           }
@@ -46,12 +46,12 @@ pipeline {
             echo 'Deployed'
           }
         }
-        stage('') {
+        stage('Deploy') {
           steps {
             echo 'Deploy'
           }
         }
-        stage('') {
+        stage('Deploy') {
           steps {
             echo 'Learn Deploy'
           }
@@ -71,7 +71,7 @@ pipeline {
             junit(allowEmptyResults: true, testResults: 'done')
           }
         }
-        stage('') {
+        stage('TEST') {
           steps {
             echo 'AM testing '
           }
