@@ -32,7 +32,7 @@ pipeline {
             echo 'Demo Build '
           }
         }
-        stage('build') {
+        stage('DEPLOY') {
           steps {
             echo 'Learn Building '
           }
@@ -46,7 +46,7 @@ pipeline {
             echo 'Deployed'
           }
         }
-        stage('Deploy') {
+        stage('BUILD') {
           steps {
             echo 'Deploy'
           }
