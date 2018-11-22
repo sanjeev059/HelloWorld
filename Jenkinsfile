@@ -20,19 +20,19 @@ pipeline {
         }
       }
     }
-    stage('') {
+    stage('error') {
       parallel {
         stage('Build') {
           steps {
             echo 'Build Prod'
           }
         }
-        stage('Build') {
+        stage('Build Demo') {
           steps {
             echo 'Demo Build '
           }
         }
-        stage('Build') {
+        stage('Build Learn') {
           steps {
             echo 'Leran building'
           }
@@ -41,17 +41,17 @@ pipeline {
     }
     stage('Deploy ') {
       parallel {
-        stage('Deploy ') {
+        stage('Deploy Prod') {
           steps {
             echo 'Deployed'
           }
         }
-        stage('DEPLOY') {
+        stage('Deploy demo') {
           steps {
             echo 'Deploy'
           }
         }
-        stage('Deploy') {
+        stage('Deploy Learn') {
           steps {
             echo 'Learn Deploy'
           }
