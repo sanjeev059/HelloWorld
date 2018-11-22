@@ -24,7 +24,7 @@ pipeline {
       parallel {
         stage('error') {
           steps {
-            echo 'Building'
+            echo 'Build Prod'
           }
         }
         stage('Build') {
