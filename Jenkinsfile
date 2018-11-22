@@ -20,9 +20,9 @@ pipeline {
         }
       }
     }
-    stage('Build') {
+    stage('') {
       parallel {
-        stage('error') {
+        stage('Build') {
           steps {
             echo 'Build Prod'
           }
