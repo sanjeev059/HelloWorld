@@ -17,8 +17,37 @@ pipeline {
       }
     }
     stage('Test Learn') {
-      steps {
-        echo 'tested'
+      parallel {
+        stage('Test Learn') {
+          steps {
+            echo 'tested'
+          }
+        }
+        stage('test1') {
+          steps {
+            echo 'Test 1'
+          }
+        }
+        stage('Test2') {
+          steps {
+            echo 'test2'
+          }
+        }
+        stage('Test 3') {
+          steps {
+            echo 'test3'
+          }
+        }
+        stage('Test4') {
+          steps {
+            echo 'test4'
+          }
+        }
+        stage('TestN') {
+          steps {
+            echo 'test N'
+          }
+        }
       }
     }
     stage('Artifacts') {
